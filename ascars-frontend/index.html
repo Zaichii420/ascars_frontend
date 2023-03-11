@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>HI</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+        <style>
+            .box {
+                /*background-color: rgb(255, 123, 141);*/
+                height: 500px;
+                width: 500px;
+                background-image: url(cute.png);
+              }
+            h2{
+              font-family: cursive;
+              font-size: 50px;
+            }
+            h3{
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              font-size: 20px;
+              color: crimson;
+
+            }
+            button{
+              color: deeppink;
+            }
+        </style>
+ 
+    <body>
+      <h2>
+        Grafiek data project dingetje
+      </h2>
+      <h3> klein verhaaltje over de grafieken en data</h3>
+        <div id="app">
+            <button @click="toggleBox">Grafiekje</button>
+            <test-box v-if="isVisible" />
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data: function() {
+                    return {
+                        isVisible: false
+                    }
+                },
+                methods: {
+                    toggleBox: function() {
+                        this.isVisible = !this.isVisible
+                    }
+                },
+                updated() {
+                    console.log('updated')
+                }
+            })
+            app.component('test-box', {
+                template: `
+                    <div class="box"></div>
+                `,
+                created() {
+                    console.log('created')
+                },
+                mounted() {
+                    console.log('mounted')
+                },
+                unmounted() {
+                    console.log('unmounted')
+                }
+            })
+            app.mount('#app')
+        </script>
+    </body>
+</html>

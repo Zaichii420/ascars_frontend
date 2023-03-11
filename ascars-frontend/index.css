@@ -1,0 +1,23 @@
+body{
+    background-image: url(background.jpg);
+}
+
+.box {
+    background-color: rgb(255, 123, 141);
+    height: 500px;
+    width: 500px;
+    background-image: url(./cute.jpg);
+    }
+h2{
+    font-family: cursive;
+    font-size: 50px;
+    color: white;
+    }
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: crimson;
+    }
+button{
+    color: deeppink;
+    }
