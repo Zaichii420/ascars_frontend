@@ -1,12 +1,18 @@
 body{
-    background-image: url(background.jpg);
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box {
     background-color: rgb(255, 123, 141);
-    height: 500px;
-    width: 500px;
-    background-image: url(cute.jpg);
+    height: 494px;
+    max-width: 75%;
+    /* padding: 25%; */
+    background-image: url(1_1_400.png);
+    /* background-position: left; */
+    background-size: contain;
+    background-repeat: no-repeat;
     }
 h2{
     font-family: cursive;
